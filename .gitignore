@@ -1,0 +1,19 @@
+# data: large, regenerable, or of unclear redistribution status (see docs/data.md)
+data/raw_all/
+data/github_repos_all.csv
+data/github_repos_all_noname.csv
+data/collection_report.json
+!data/sample/
+
+# local working files
+archive/
+.DS_Store
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+.env
+*.tmp
+
+# release asset built by `python fetch_data.py --pack`; attach it to a GitHub Release instead of committing it
+dist/

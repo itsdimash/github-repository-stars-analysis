@@ -1,0 +1,37 @@
+{
+  "audited_on": "2026-10-26",
+  "collection_dates_by_page": {
+    "2026-10-10": 5324
+  },
+  "query_template": "created:<window> stars:>=100 (sort=stars, order=desc, per_page=100)",
+  "period": [
+    "2007-10-01T00:00:00",
+    "2026-10-10T23:59:59"
+  ],
+  "pages_cached": 5324,
+  "leaf_windows": 998,
+  "split_markers": 5,
+  "uncovered_gaps": [],
+  "overlapping_windows": [],
+  "windows_with_missing_pages": [],
+  "windows_truncated_by_1000_limit": [],
+  "pages_flagged_incomplete_results": [],
+  "sum_of_reported_total_count": 483350,
+  "items_expected_from_reported_totals": 483350,
+  "items_found_in_cache": 483349,
+  "unique_repositories_in_cache": 483349,
+  "repositories_seen_more_than_once": 0,
+  "csv_rows": 483349,
+  "csv_unique_repo_ids": 483349,
+  "csv_rows_with_stars_below_100": 1,
+  "duplicate_csv_repo_ids": 0,
+  "cache_ids_missing_from_csv": 0,
+  "csv_ids_not_in_cache": 0,
+  "example_cache_ids_missing_from_csv": [],
+  "example_csv_ids_not_in_cache": [],
+  "csv_matches_cache": true,
+  "problems": [],
+  "warnings": [
+    "cache is 1 item(s) short of the totals GitHub reported (documented in docs/data.md)"
+  ]
+}

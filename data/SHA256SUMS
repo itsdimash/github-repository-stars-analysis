@@ -1,0 +1,3 @@
+# SHA-256 of the immutable analysis input (collected 2026-10-10, 483,349 rows).
+# Verify with: python fetch_data.py --verify
+b842bc9d48a3c5332d278e0446e1cf4fa42b1fbd2ef753380780ba92fc87a7b8  github_repos_all.csv

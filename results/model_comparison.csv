@@ -1,0 +1,15 @@
+model,R2,RMSE,MAE,within_2x,R2_lo,R2_hi,split
+A  M0  forks only,0.515,0.7322,0.572,0.6787,0.4984,0.5299,random owner-grouped test
+A  M1  multiple regression,0.579,0.6822,0.5305,0.7152,0.5652,0.5916,random owner-grouped test
+"A  M2  + language, license",0.5875,0.6753,0.5247,0.7202,0.5738,0.5998,random owner-grouped test
+A  M3  M2 + degree-3 forks,0.6373,0.6332,0.4808,0.7655,0.6204,0.6521,random owner-grouped test
+A  GB  gradient boosting,0.6891,0.5862,0.444,0.803,0.677,0.7006,random owner-grouped test
+B  M2  profile-only OLS,0.1378,0.9763,0.7466,0.5595,0.1304,0.1445,random owner-grouped test
+B  GB  profile-only boosting,0.1826,0.9506,0.7262,0.5815,0.1746,0.1905,random owner-grouped test
+A  M0  forks only,0.4086,0.7952,0.6097,0.6547,0.3938,0.4234,time holdout (created >= 2023)
+A  M1  multiple regression,0.4954,0.7346,0.5626,0.6922,0.4817,0.509,time holdout (created >= 2023)
+"A  M2  + language, license",0.4866,0.7409,0.5687,0.6864,0.4725,0.5006,time holdout (created >= 2023)
+A  M3  M2 + degree-3 forks,0.5843,0.6667,0.506,0.7397,0.5739,0.5946,time holdout (created >= 2023)
+A  GB  gradient boosting,0.6654,0.5981,0.4475,0.8037,0.6572,0.6735,time holdout (created >= 2023)
+B  M2  profile-only OLS,0.0585,1.0034,0.7242,0.6148,0.0525,0.0647,time holdout (created >= 2023)
+B  GB  profile-only boosting,0.0837,0.9898,0.7563,0.5491,0.0769,0.0905,time holdout (created >= 2023)

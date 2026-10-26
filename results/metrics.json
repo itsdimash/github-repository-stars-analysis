@@ -1,0 +1,719 @@
+{
+  "data": {
+    "source_file": "github_repos_all.csv",
+    "source_sha256": "b842bc9d48a3c5332d278e0446e1cf4fa42b1fbd2ef753380780ba92fc87a7b8",
+    "raw_rows": 483349,
+    "rows_used": 483348,
+    "owners": 257344,
+    "collected_on": "2026-10-10"
+  },
+  "eda": {
+    "skew_stars": 38.04498236733022,
+    "skew_log_stars": 1.5141253095627436,
+    "corr_logstars_logforks": 0.7205166762302361
+  },
+  "split": {
+    "train": 291100,
+    "validation": 97017,
+    "test": 95231,
+    "seed": 42
+  },
+  "selection_degree": {
+    "chosen": 3,
+    "table": [
+      {
+        "degree": 1,
+        "R2_train": 0.5845,
+        "R2_val": 0.6029,
+        "RMSE_val": 0.6716
+      },
+      {
+        "degree": 2,
+        "R2_train": 0.6351,
+        "R2_val": 0.6512,
+        "RMSE_val": 0.6294
+      },
+      {
+        "degree": 3,
+        "R2_train": 0.6417,
+        "R2_val": 0.6565,
+        "RMSE_val": 0.6246
+      },
+      {
+        "degree": 4,
+        "R2_train": 0.6431,
+        "R2_val": 0.6579,
+        "RMSE_val": 0.6233
+      },
+      {
+        "degree": 5,
+        "R2_train": 0.6435,
+        "R2_val": 0.6583,
+        "RMSE_val": 0.6229
+      },
+      {
+        "degree": 6,
+        "R2_train": 0.6435,
+        "R2_val": 0.6583,
+        "RMSE_val": 0.6229
+      }
+    ]
+  },
+  "selection_gb": {
+    "chosen": {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 31
+    },
+    "table": [
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "R2_val": 0.7006,
+        "RMSE_val": 0.5831,
+        "n_iter": 500
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 127,
+        "R2_val": 0.7026,
+        "RMSE_val": 0.5812,
+        "n_iter": 347
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "R2_val": 0.7029,
+        "RMSE_val": 0.5808,
+        "n_iter": 500
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 127,
+        "R2_val": 0.7016,
+        "RMSE_val": 0.5821,
+        "n_iter": 173
+      }
+    ]
+  },
+  "test": [
+    {
+      "model": "A  M0  forks only",
+      "R2": 0.515,
+      "RMSE": 0.7322,
+      "MAE": 0.572,
+      "within_2x": 0.6787,
+      "R2_lo": 0.4984,
+      "R2_hi": 0.5299
+    },
+    {
+      "model": "A  M1  multiple regression",
+      "R2": 0.579,
+      "RMSE": 0.6822,
+      "MAE": 0.5305,
+      "within_2x": 0.7152,
+      "R2_lo": 0.5652,
+      "R2_hi": 0.5916
+    },
+    {
+      "model": "A  M2  + language, license",
+      "R2": 0.5875,
+      "RMSE": 0.6753,
+      "MAE": 0.5247,
+      "within_2x": 0.7202,
+      "R2_lo": 0.5738,
+      "R2_hi": 0.5998
+    },
+    {
+      "model": "A  M3  M2 + degree-3 forks",
+      "R2": 0.6373,
+      "RMSE": 0.6332,
+      "MAE": 0.4808,
+      "within_2x": 0.7655,
+      "R2_lo": 0.6204,
+      "R2_hi": 0.6521
+    },
+    {
+      "model": "A  GB  gradient boosting",
+      "R2": 0.6891,
+      "RMSE": 0.5862,
+      "MAE": 0.444,
+      "within_2x": 0.803,
+      "R2_lo": 0.677,
+      "R2_hi": 0.7006
+    },
+    {
+      "model": "B  M2  profile-only OLS",
+      "R2": 0.1378,
+      "RMSE": 0.9763,
+      "MAE": 0.7466,
+      "within_2x": 0.5595,
+      "R2_lo": 0.1304,
+      "R2_hi": 0.1445
+    },
+    {
+      "model": "B  GB  profile-only boosting",
+      "R2": 0.1826,
+      "RMSE": 0.9506,
+      "MAE": 0.7262,
+      "within_2x": 0.5815,
+      "R2_lo": 0.1746,
+      "R2_hi": 0.1905
+    }
+  ],
+  "time_holdout": {
+    "train_rows": 370426,
+    "test_rows": 112922,
+    "selection": {
+      "degree": 3,
+      "gb": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 127
+      },
+      "degree_table": [
+        {
+          "degree": 1,
+          "R2_train": 0.6067,
+          "R2_val": 0.598,
+          "RMSE_val": 0.6774
+        },
+        {
+          "degree": 2,
+          "R2_train": 0.647,
+          "R2_val": 0.6355,
+          "RMSE_val": 0.6451
+        },
+        {
+          "degree": 3,
+          "R2_train": 0.6561,
+          "R2_val": 0.6422,
+          "RMSE_val": 0.6391
+        },
+        {
+          "degree": 4,
+          "R2_train": 0.6567,
+          "R2_val": 0.6429,
+          "RMSE_val": 0.6384
+        },
+        {
+          "degree": 5,
+          "R2_train": 0.657,
+          "R2_val": 0.6435,
+          "RMSE_val": 0.6379
+        },
+        {
+          "degree": 6,
+          "R2_train": 0.6571,
+          "R2_val": 0.6435,
+          "RMSE_val": 0.6379
+        }
+      ],
+      "gb_table": [
+        {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 31,
+          "R2_val": 0.6907,
+          "RMSE_val": 0.5942,
+          "n_iter": 500
+        },
+        {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 127,
+          "R2_val": 0.693,
+          "RMSE_val": 0.592,
+          "n_iter": 377
+        },
+        {
+          "learning_rate": 0.1,
+          "max_leaf_nodes": 31,
+          "R2_val": 0.691,
+          "RMSE_val": 0.5939,
+          "n_iter": 315
+        },
+        {
+          "learning_rate": 0.1,
+          "max_leaf_nodes": 127,
+          "R2_val": 0.692,
+          "RMSE_val": 0.593,
+          "n_iter": 206
+        }
+      ],
+      "uses_only_created_year_leq": 2022
+    },
+    "table": [
+      {
+        "model": "A  M0  forks only",
+        "R2": 0.4086,
+        "RMSE": 0.7952,
+        "MAE": 0.6097,
+        "within_2x": 0.6547,
+        "R2_lo": 0.3938,
+        "R2_hi": 0.4234
+      },
+      {
+        "model": "A  M1  multiple regression",
+        "R2": 0.4954,
+        "RMSE": 0.7346,
+        "MAE": 0.5626,
+        "within_2x": 0.6922,
+        "R2_lo": 0.4817,
+        "R2_hi": 0.509
+      },
+      {
+        "model": "A  M2  + language, license",
+        "R2": 0.4866,
+        "RMSE": 0.7409,
+        "MAE": 0.5687,
+        "within_2x": 0.6864,
+        "R2_lo": 0.4725,
+        "R2_hi": 0.5006
+      },
+      {
+        "model": "A  M3  M2 + degree-3 forks",
+        "R2": 0.5843,
+        "RMSE": 0.6667,
+        "MAE": 0.506,
+        "within_2x": 0.7397,
+        "R2_lo": 0.5739,
+        "R2_hi": 0.5946
+      },
+      {
+        "model": "A  GB  gradient boosting",
+        "R2": 0.6654,
+        "RMSE": 0.5981,
+        "MAE": 0.4475,
+        "within_2x": 0.8037,
+        "R2_lo": 0.6572,
+        "R2_hi": 0.6735
+      },
+      {
+        "model": "B  M2  profile-only OLS",
+        "R2": 0.0585,
+        "RMSE": 1.0034,
+        "MAE": 0.7242,
+        "within_2x": 0.6148,
+        "R2_lo": 0.0525,
+        "R2_hi": 0.0647
+      },
+      {
+        "model": "B  GB  profile-only boosting",
+        "R2": 0.0837,
+        "RMSE": 0.9898,
+        "MAE": 0.7563,
+        "within_2x": 0.5491,
+        "R2_lo": 0.0769,
+        "R2_hi": 0.0905
+      }
+    ]
+  },
+  "r2_by_created_year": [
+    {
+      "year": 2010,
+      "n": 961,
+      "A  GB  gradient boosting": 0.8041,
+      "A  M2  + language, license": 0.7249,
+      "B  GB  profile-only boosting": 0.353
+    },
+    {
+      "year": 2011,
+      "n": 1797,
+      "A  GB  gradient boosting": 0.7705,
+      "A  M2  + language, license": 0.6905,
+      "B  GB  profile-only boosting": 0.2901
+    },
+    {
+      "year": 2012,
+      "n": 2768,
+      "A  GB  gradient boosting": 0.7574,
+      "A  M2  + language, license": 0.6704,
+      "B  GB  profile-only boosting": 0.2647
+    },
+    {
+      "year": 2013,
+      "n": 4023,
+      "A  GB  gradient boosting": 0.7231,
+      "A  M2  + language, license": 0.6493,
+      "B  GB  profile-only boosting": 0.2485
+    },
+    {
+      "year": 2014,
+      "n": 4755,
+      "A  GB  gradient boosting": 0.7141,
+      "A  M2  + language, license": 0.6264,
+      "B  GB  profile-only boosting": 0.2446
+    },
+    {
+      "year": 2015,
+      "n": 6388,
+      "A  GB  gradient boosting": 0.6952,
+      "A  M2  + language, license": 0.6094,
+      "B  GB  profile-only boosting": 0.1935
+    },
+    {
+      "year": 2016,
+      "n": 7103,
+      "A  GB  gradient boosting": 0.7057,
+      "A  M2  + language, license": 0.6181,
+      "B  GB  profile-only boosting": 0.1829
+    },
+    {
+      "year": 2017,
+      "n": 7849,
+      "A  GB  gradient boosting": 0.6837,
+      "A  M2  + language, license": 0.5862,
+      "B  GB  profile-only boosting": 0.1812
+    },
+    {
+      "year": 2018,
+      "n": 7859,
+      "A  GB  gradient boosting": 0.6786,
+      "A  M2  + language, license": 0.5766,
+      "B  GB  profile-only boosting": 0.1703
+    },
+    {
+      "year": 2019,
+      "n": 7862,
+      "A  GB  gradient boosting": 0.6761,
+      "A  M2  + language, license": 0.5747,
+      "B  GB  profile-only boosting": 0.1634
+    },
+    {
+      "year": 2020,
+      "n": 8191,
+      "A  GB  gradient boosting": 0.6484,
+      "A  M2  + language, license": 0.5552,
+      "B  GB  profile-only boosting": 0.1525
+    },
+    {
+      "year": 2021,
+      "n": 6710,
+      "A  GB  gradient boosting": 0.6056,
+      "A  M2  + language, license": 0.5017,
+      "B  GB  profile-only boosting": 0.137
+    },
+    {
+      "year": 2022,
+      "n": 5981,
+      "A  GB  gradient boosting": 0.6352,
+      "A  M2  + language, license": 0.5352,
+      "B  GB  profile-only boosting": 0.135
+    },
+    {
+      "year": 2023,
+      "n": 6275,
+      "A  GB  gradient boosting": 0.6691,
+      "A  M2  + language, license": 0.5715,
+      "B  GB  profile-only boosting": 0.1555
+    },
+    {
+      "year": 2024,
+      "n": 5171,
+      "A  GB  gradient boosting": 0.6753,
+      "A  M2  + language, license": 0.5463,
+      "B  GB  profile-only boosting": 0.1228
+    },
+    {
+      "year": 2025,
+      "n": 5360,
+      "A  GB  gradient boosting": 0.6981,
+      "A  M2  + language, license": 0.5624,
+      "B  GB  profile-only boosting": 0.1273
+    },
+    {
+      "year": 2026,
+      "n": 5478,
+      "A  GB  gradient boosting": 0.6959,
+      "A  M2  + language, license": 0.5136,
+      "B  GB  profile-only boosting": 0.0924
+    }
+  ],
+  "effects_se_method": {
+    "method": "owner-clustered (CR1, statsmodels cov_type=cluster)",
+    "n_owner_clusters": 205875
+  },
+  "effects_description": "multiplicative difference in fitted (conditional geometric-mean) stars, %, of the log(stars) OLS model M2; log1p features (size, forks, issues, description length): (1.1**coef-1)*100 for a 10% increase in 1 + feature; unit and indicator terms: (exp(coef)-1)*100",
+  "effects_pct_stars": [
+    {
+      "feature": "template repository",
+      "pct": -25.64,
+      "lo": -28.1,
+      "hi": -23.09
+    },
+    {
+      "feature": "owned by an organization",
+      "pct": -11.35,
+      "lo": -12.73,
+      "hi": -9.95
+    },
+    {
+      "feature": "wiki enabled",
+      "pct": -8.14,
+      "lo": -9.58,
+      "hi": -6.67
+    },
+    {
+      "feature": "Projects enabled",
+      "pct": -6.84,
+      "lo": -8.9,
+      "hi": -4.74
+    },
+    {
+      "feature": "age +1 year",
+      "pct": -1.88,
+      "lo": -2.03,
+      "hi": -1.73
+    },
+    {
+      "feature": "archived",
+      "pct": -1.39,
+      "lo": -3.15,
+      "hi": 0.4
+    },
+    {
+      "feature": "+1 name character",
+      "pct": -1.28,
+      "lo": -1.36,
+      "hi": -1.21
+    },
+    {
+      "feature": "last push +1 year older",
+      "pct": -1.26,
+      "lo": -1.45,
+      "hi": -1.07
+    },
+    {
+      "feature": "size: 1 + size_kb +10%",
+      "pct": -0.05,
+      "lo": -0.06,
+      "hi": -0.03
+    },
+    {
+      "feature": "description length: 1 + length +10%",
+      "pct": 0.33,
+      "lo": 0.3,
+      "hi": 0.37
+    },
+    {
+      "feature": "open issues: 1 + issues +10%",
+      "pct": 0.76,
+      "lo": 0.73,
+      "hi": 0.8
+    },
+    {
+      "feature": "+1 topic",
+      "pct": 1.12,
+      "lo": 1.04,
+      "hi": 1.21
+    },
+    {
+      "feature": "has homepage",
+      "pct": 1.6,
+      "lo": 0.63,
+      "hi": 2.59
+    },
+    {
+      "feature": "Issues enabled",
+      "pct": 3.18,
+      "lo": -1.84,
+      "hi": 8.45
+    },
+    {
+      "feature": "GitHub Pages",
+      "pct": 4.55,
+      "lo": 3.23,
+      "hi": 5.88
+    },
+    {
+      "feature": "forks: 1 + forks +10%",
+      "pct": 5.63,
+      "lo": 5.56,
+      "hi": 5.71
+    },
+    {
+      "feature": "default branch main/master",
+      "pct": 6.04,
+      "lo": 2.67,
+      "hi": 9.52
+    },
+    {
+      "feature": "Discussions enabled",
+      "pct": 17.16,
+      "lo": 15.92,
+      "hi": 18.41
+    }
+  ],
+  "categorical_effects_pct": [
+    {
+      "group": "language (vs Python)",
+      "label": "C",
+      "coef_pct": -0.94,
+      "lo_pct": -2.37,
+      "hi_pct": 0.52
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "C#",
+      "coef_pct": -5.4,
+      "lo_pct": -7.29,
+      "hi_pct": -3.46
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "C++",
+      "coef_pct": -5.09,
+      "lo_pct": -6.52,
+      "hi_pct": -3.64
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "Go",
+      "coef_pct": 15.29,
+      "lo_pct": 13.38,
+      "hi_pct": 17.22
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "HTML",
+      "coef_pct": -2.47,
+      "lo_pct": -5.87,
+      "hi_pct": 1.06
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "Java",
+      "coef_pct": -12.45,
+      "lo_pct": -14.0,
+      "hi_pct": -10.87
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "JavaScript",
+      "coef_pct": 4.62,
+      "lo_pct": 3.14,
+      "hi_pct": 6.12
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "None",
+      "coef_pct": 36.65,
+      "lo_pct": 34.64,
+      "hi_pct": 38.69
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "Other",
+      "coef_pct": 4.86,
+      "lo_pct": 3.63,
+      "hi_pct": 6.11
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "Rust",
+      "coef_pct": 23.39,
+      "lo_pct": 21.12,
+      "hi_pct": 25.7
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "Shell",
+      "coef_pct": 1.42,
+      "lo_pct": -0.4,
+      "hi_pct": 3.28
+    },
+    {
+      "group": "language (vs Python)",
+      "label": "TypeScript",
+      "coef_pct": 9.21,
+      "lo_pct": 7.54,
+      "hi_pct": 10.9
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "Apache-2.0",
+      "coef_pct": -5.99,
+      "lo_pct": -7.76,
+      "hi_pct": -4.19
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "BSD-3-Clause",
+      "coef_pct": -7.06,
+      "lo_pct": -9.6,
+      "hi_pct": -4.45
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "GPL-3.0",
+      "coef_pct": -6.22,
+      "lo_pct": -7.56,
+      "hi_pct": -4.85
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "NOASSERTION",
+      "coef_pct": -4.28,
+      "lo_pct": -5.58,
+      "hi_pct": -2.97
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "None",
+      "coef_pct": -12.9,
+      "lo_pct": -13.91,
+      "hi_pct": -11.88
+    },
+    {
+      "group": "license (vs MIT)",
+      "label": "Other",
+      "coef_pct": -5.37,
+      "lo_pct": -7.06,
+      "hi_pct": -3.64
+    }
+  ],
+  "diagnostics": {
+    "max_cooks_d": 0.0005238475939806608,
+    "share_cooks_gt_4n": 0.059391884405990976,
+    "max_leverage": 0.0006378245861319936,
+    "resid_skew": 0.30989991529072886,
+    "resid_excess_kurtosis": 1.1472710582275418,
+    "durbin_watson_by_repo_id": 1.9434971064047317,
+    "breusch_pagan_LM": 30068.18492830246,
+    "share_fitted_below_log100": 0.04916301012323603,
+    "se_ratio_HC3_to_classic_median": 1.0232680699457308,
+    "se_ratio_max": 1.4338947536171862,
+    "se_ratio_clustered_to_classic_median": 1.8768153947267092,
+    "se_ratio_clustered_to_classic_max": 3.993722372811929,
+    "se_ratio_clustered_to_classic_forks": 3.9065916784117767,
+    "vif": {
+      "log_forks": 1.3811306130783692,
+      "log_issues": 1.3782300327903545,
+      "log_size": 1.1519129605857819,
+      "age_years": 1.6042503102585175,
+      "years_since_push": 1.5642721608239227,
+      "n_topics": 1.190490896835717,
+      "log_desc_len": 1.0928677960050661,
+      "name_len": 1.047587487922572
+    }
+  },
+  "rejected_attempts_validation": {
+    "raw_stars_R2_val": 0.14445110603637434,
+    "raw_stars_negative_predictions": 0.30958491810713584,
+    "derived_R2_val": 0.6072342445575902,
+    "m2_R2_val": 0.6028569018044647,
+    "derived_forks_coef": 0.3979617908686711,
+    "m2_forks_coef": 0.5701285494133157,
+    "derived_forks_se": 0.0029547785754985736,
+    "m2_forks_se": 0.0011779817409513541,
+    "vif_with_derived": {
+      "log_forks": 8.737062852551153,
+      "log_issues": 1.3819280366851057,
+      "log_size": 1.1512695553999532,
+      "age_years": 86455.70104703117,
+      "years_since_push": 51193.43723957937,
+      "n_topics": 1.1876086551975804,
+      "log_desc_len": 1.0957915935969567,
+      "name_len": 1.0560304572943522,
+      "log_forks_per_year": 8.610863146967148,
+      "days_active": 71277.23905714328
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# Versions the analysis was run and tested with (Python 3.13).
+numpy==2.4.1
+pandas==3.0.3
+scipy==1.18.0
+statsmodels==0.15.0
+scikit-learn==1.9.0
+matplotlib==3.11.2
+requests==2.32.5          # only for collect_all.py
+nbformat==5.10.4          # only to re-execute the notebook
+nbconvert==7.16.6
+ipykernel==7.1.0
+pytest==9.1.1             # only for the tests
